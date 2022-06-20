@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">CueSample</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_sample">Toast Sample</string>
     <string name="primary">This is a primary toast—check it out!</string>
     <string name="success">This is a success toast—check it out!</string>
     <string name="secondary">This is a secondary toast—check it out!</string>
@@ -11,4 +11,20 @@
     <string name="info">This is a info toast—check it out!</string>
     <string name="light">This is a light toast—check it out!</string>
     <string name="dark">This is a dark toast—check it out!</string>
+    <string name="title_generate_toast">Generate Toast</string>
+    <string name="text_toast_type">Toast Type</string>
+    <string name="text_primary">Primary</string>
+    <string name="text_success">Success</string>
+    <string name="text_warning">Warning</string>
+    <string name="text_info">Info</string>
+    <string name="text_secondary">Secondary</string>
+    <string name="text_danger">Danger</string>
+    <string name="text_light">Light</string>
+    <string name="text_dark">Dark</string>
+    <string name="text_toast_gravity">Toast Gravity</string>
+    <string name="text_top">Top</string>
+    <string name="text_center">Center</string>
+    <string name="text_bottom">Bottom</string>
+    <string name="text_show">Show</string>
+    <string name="text_samples">Samples</string>
 </resources>

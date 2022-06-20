@@ -1,10 +1,7 @@
 apply plugin: 'com.android.library'
 
-ext {
-    PUBLISH_GROUP_ID = 'com.fxn769'
-    PUBLISH_ARTIFACT_ID = 'cue'
-    PUBLISH_VERSION = '1.1'
-}
+group = "com.fxn.cue"
+version = "1.1"
 
 android {
     compileSdkVersion 31
@@ -26,6 +23,8 @@ android {
     lint {
         abortOnError false
     }
+
+    namespace = "com.fxn.cue"
 }
 
 dependencies {

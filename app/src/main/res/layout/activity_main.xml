@@ -16,14 +16,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:text="Generate Toast"
+            android:text="@string/title_generate_toast"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="32sp" />
+            android:textSize="36sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toast Type" />
+            android:text="@string/text_toast_type" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="typeClick"
-                    android:text="Primary"
+                    android:text="@string/text_primary"
                     android:textColor="@color/colorPrimaryDark" />
 
                 <RadioButton
@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="typeClick"
-                    android:text="Success"
+                    android:text="@string/text_success"
                     android:textColor="@color/colorPrimaryDark" />
 
                 <RadioButton
@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="typeClick"
-                    android:text="Warning"
+                    android:text="@string/text_warning"
                     android:textColor="@color/colorPrimaryDark" />
 
                 <RadioButton
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="typeClick"
-                    android:text="Info"
+                    android:text="@string/text_info"
                     android:textColor="@color/colorPrimaryDark" />
 
             </RadioGroup>
@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="typeClick"
-                    android:text="Secondary"
+                    android:text="@string/text_secondary"
                     android:textColor="@color/colorPrimaryDark" />
 
                 <RadioButton
@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="typeClick"
-                    android:text="Danger"
+                    android:text="@string/text_danger"
                     android:textColor="@color/colorPrimaryDark" />
 
                 <RadioButton
@@ -108,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="typeClick"
-                    android:text="Light"
+                    android:text="@string/text_light"
                     android:textColor="@color/colorPrimaryDark" />
 
                 <RadioButton
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="typeClick"
-                    android:text="Dark"
+                    android:text="@string/text_dark"
                     android:textColor="@color/colorPrimaryDark" />
 
             </RadioGroup>
@@ -128,7 +128,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Toast Gravity" />
+            android:text="@string/text_toast_gravity" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="gravityClick"
-                android:text="Top"
+                android:text="@string/text_top"
                 android:textColor="@color/colorPrimaryDark" />
 
             <RadioButton
@@ -151,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="gravityClick"
-                android:text="Center"
+                android:text="@string/text_center"
                 android:textColor="@color/colorPrimaryDark" />
 
             <RadioButton
@@ -160,13 +160,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="gravityClick"
-                android:text="Bottom"
+                android:text="@string/text_bottom"
                 android:textColor="@color/colorPrimaryDark" />
+
         </RadioGroup>
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1">
 
             <TextView
@@ -178,8 +179,9 @@
                 android:gravity="center"
                 android:onClick="generate"
                 android:padding="12dp"
-                android:text="Generate"
+                android:text="@string/text_show"
                 android:textColor="#0c5460" />
+
         </FrameLayout>
 
     </LinearLayout>
@@ -192,7 +194,7 @@
         android:gravity="center"
         android:onClick="samplesClick"
         android:padding="11dp"
-        android:text="Samples"
+        android:text="@string/text_samples"
         android:textColor="@color/colorPrimaryDark" />
 
 </FrameLayout>

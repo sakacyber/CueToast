@@ -1,4 +1,4 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,11 +15,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="12dp"
-            android:text="Toast Samples"
+            android:text="@string/title_sample"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp" />
+            android:textSize="36sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -28,8 +28,7 @@
             android:background="@drawable/primary"
             android:padding="12dp"
             android:text="@string/primary"
-            android:textColor="#004085"
-            android:textSize="12dp" />
+            android:textColor="#004085" />
 
         <TextView
             android:layout_width="match_parent"
@@ -38,8 +37,7 @@
             android:background="@drawable/success"
             android:padding="12dp"
             android:text="@string/success"
-            android:textColor="#155724"
-            android:textSize="12dp" />
+            android:textColor="#155724" />
 
         <TextView
             android:layout_width="match_parent"
@@ -48,8 +46,7 @@
             android:background="@drawable/secondary"
             android:padding="12dp"
             android:text="@string/secondary"
-            android:textColor="#383d41"
-            android:textSize="12dp" />
+            android:textColor="#383d41" />
 
         <TextView
             android:layout_width="match_parent"
@@ -58,8 +55,7 @@
             android:background="@drawable/danger"
             android:padding="12dp"
             android:text="@string/danger"
-            android:textColor="#721c24"
-            android:textSize="12dp" />
+            android:textColor="#721c24" />
 
         <TextView
             android:layout_width="match_parent"
@@ -68,8 +64,7 @@
             android:background="@drawable/warning"
             android:padding="12dp"
             android:text="@string/warning"
-            android:textColor="#856404"
-            android:textSize="12dp" />
+            android:textColor="#856404" />
 
         <TextView
             android:layout_width="match_parent"
@@ -78,8 +73,7 @@
             android:background="@drawable/info"
             android:padding="12dp"
             android:text="@string/info"
-            android:textColor="#0c5460"
-            android:textSize="12dp" />
+            android:textColor="#0c5460" />
 
         <TextView
             android:layout_width="match_parent"
@@ -88,8 +82,7 @@
             android:background="@drawable/light"
             android:padding="12dp"
             android:text="@string/light"
-            android:textColor="#818182"
-            android:textSize="12dp" />
+            android:textColor="#818182" />
 
         <TextView
             android:layout_width="match_parent"
@@ -98,7 +91,8 @@
             android:background="@drawable/dark"
             android:padding="12dp"
             android:text="@string/dark"
-            android:textColor="#1b1e21"
-            android:textSize="12dp" />
+            android:textColor="#1b1e21" />
+
     </LinearLayout>
-</ScrollView>
+
+</androidx.core.widget.NestedScrollView>
