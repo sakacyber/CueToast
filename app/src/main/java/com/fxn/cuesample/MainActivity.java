@@ -1,17 +1,19 @@
 package com.fxn.cuesample;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.RadioGroup;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.fxn.cue.Cue;
 import com.fxn.cue.enums.Type;
 import com.fxn.fragments.SampleFragment;
 
 public class MainActivity extends AppCompatActivity implements FragmentManager.OnBackStackChangedListener {
+
     private Type type = Type.PRIMARY;
     private int gravity = Gravity.BOTTOM;
     private RadioGroup rg1, rg2;
@@ -26,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements FragmentManager.O
         fragmentManager = getSupportFragmentManager();
         fragmentManager.addOnBackStackChangedListener(this);
     }
-
 
     public void typeClick(View view) {
         switch (view.getId()) {

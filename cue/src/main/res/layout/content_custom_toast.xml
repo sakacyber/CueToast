@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:background="@drawable/primary"
-        android:padding="16dp"
-        android:textSize="12dp" />
+        android:padding="16dp" />
 
 </LinearLayout>

@@ -47,5 +47,4 @@ public class ColorRes {
     public static int dark_background_color = Color.parseColor("#d6d8d9");
     public static int dark_text_color = Color.parseColor("#1b1e21");
     public static int dark_border_color = Color.parseColor("#c6c8ca");
-
 }

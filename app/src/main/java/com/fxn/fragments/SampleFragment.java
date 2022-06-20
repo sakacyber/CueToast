@@ -1,14 +1,13 @@
 package com.fxn.fragments;
 
-
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.fxn.cuesample.R;
+import androidx.fragment.app.Fragment;
 
+import com.fxn.cuesample.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,14 +16,12 @@ import com.fxn.cuesample.R;
  */
 public class SampleFragment extends Fragment {
 
-
     public SampleFragment() {
         // Required empty public constructor
     }
 
     public static SampleFragment newInstance() {
-        SampleFragment fragment = new SampleFragment();
-        return fragment;
+        return new SampleFragment();
     }
 
     @Override
@@ -33,12 +30,8 @@ public class SampleFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_sample, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_sample, container, false);
     }
-
-
 }

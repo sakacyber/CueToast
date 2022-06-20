@@ -5,14 +5,13 @@ ext {
     PUBLISH_ARTIFACT_ID = 'cue'
     PUBLISH_VERSION = '1.1'
 }
+
 android {
-    compileSdkVersion 26
+    compileSdkVersion 31
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 26
-        versionCode 3
-        versionName "1.1"
+        minSdkVersion 21
+        targetSdkVersion 31
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -27,11 +26,8 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
-
+    testImplementation "junit:junit:$junit"
+    androidTestImplementation "androidx.test:runner:$testRuner"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$testEspresso"
 }

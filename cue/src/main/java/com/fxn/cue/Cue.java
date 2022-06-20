@@ -35,9 +35,8 @@ public class Cue {
     private int custom_text_color = ColorRes.primary_text_color;
     private boolean hideToast = false;
 
-   
-    public static Cue getInstance() {
-        if(cue==null) cue = new Cue();
+    public static Cue init() {
+        if (cue == null) cue = new Cue();
         return cue;
     }
 
@@ -151,36 +150,32 @@ public class Cue {
     }
 
     public void show() {
-        if(context==null) return; // do nothing if context is now null (avoid NullPointerException)
-        
+        if (context == null)
+            return; // do nothing if context is now null (avoid NullPointerException)
+
         Toast toast = new Toast(context.getApplicationContext());
         View view = LayoutInflater.from(context).inflate(R.layout.content_custom_toast, null, false);
-        TextView custom_text = view.findViewById(R.id.custom_text);
-        custom_text.setGravity(textGravity);
-        custom_text.setText(message);
-        custom_text.setTextSize(textSize);
-        custom_text.setPadding(padding, padding, padding, padding);
+        TextView customText = view.findViewById(R.id.custom_text);
+        customText.setGravity(textGravity);
+        customText.setText(message);
+        customText.setTextSize(textSize);
+        customText.setPadding(padding, padding, padding, padding);
         if (!fontFaceString.isEmpty()) {
             Typeface typeface = Typeface.createFromAsset(context.getAssets(), fontFaceString);
-            custom_text.setTypeface(typeface);
+            customText.setTypeface(typeface);
         }
-        getShape(type, custom_text);
+        getShape(type, customText);
         toast.setDuration(duration == Duration.LONG ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT);
         toast.setGravity(gravity, 0, 0);
         toast.setView(view);
         toast.show();
 
-        if(hideToast){
-            view.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    toast.cancel();
-                }
-            });
+        if (hideToast) {
+            view.setOnClickListener(v -> toast.cancel());
         }
     }
 
-    private void getShape(Type type, TextView custom_text) {
+    private void getShape(Type type, TextView customText) {
         GradientDrawable shape = new GradientDrawable();
         shape.setShape(GradientDrawable.RECTANGLE);
         shape.setCornerRadius(cornerRadius);
@@ -188,61 +183,59 @@ public class Cue {
             case SUCCESS: {
                 shape.setColor(ColorRes.success_background_color);
                 shape.setStroke(borderWidth, ColorRes.success_border_color);
-                custom_text.setTextColor(ColorRes.success_text_color);
+                customText.setTextColor(ColorRes.success_text_color);
             }
             break;
             case SECONDARY: {
                 shape.setColor(ColorRes.secondary_background_color);
                 shape.setStroke(borderWidth, ColorRes.secondary_border_color);
-                custom_text.setTextColor(ColorRes.secondary_text_color);
+                customText.setTextColor(ColorRes.secondary_text_color);
             }
             break;
             case DANGER: {
                 shape.setColor(ColorRes.danger_background_color);
                 shape.setStroke(borderWidth, ColorRes.danger_border_color);
-                custom_text.setTextColor(ColorRes.danger_text_color);
+                customText.setTextColor(ColorRes.danger_text_color);
             }
             break;
             case WARNING: {
                 shape.setColor(ColorRes.warning_background_color);
                 shape.setStroke(borderWidth, ColorRes.warning_border_color);
-                custom_text.setTextColor(ColorRes.warning_text_color);
+                customText.setTextColor(ColorRes.warning_text_color);
             }
             break;
             case INFO: {
                 shape.setColor(ColorRes.info_background_color);
                 shape.setStroke(borderWidth, ColorRes.info_border_color);
-                custom_text.setTextColor(ColorRes.info_text_color);
+                customText.setTextColor(ColorRes.info_text_color);
             }
             break;
             case LIGHT: {
                 shape.setColor(ColorRes.light_background_color);
                 shape.setStroke(borderWidth, ColorRes.light_border_color);
-                custom_text.setTextColor(ColorRes.light_text_color);
+                customText.setTextColor(ColorRes.light_text_color);
             }
             break;
             case DARK: {
                 shape.setColor(ColorRes.dark_background_color);
                 shape.setStroke(borderWidth, ColorRes.dark_border_color);
-                custom_text.setTextColor(ColorRes.dark_text_color);
+                customText.setTextColor(ColorRes.dark_text_color);
             }
             break;
             case CUSTOM: {
                 shape.setColor(custom_background_color);
                 shape.setStroke(borderWidth, custom_border_color);
-                custom_text.setTextColor(custom_text_color);
+                customText.setTextColor(custom_text_color);
             }
             break;
             default: {
                 shape.setColor(ColorRes.primary_background_color);
                 shape.setStroke(borderWidth, ColorRes.primary_border_color);
-                custom_text.setTextColor(ColorRes.primary_text_color);
+                customText.setTextColor(ColorRes.primary_text_color);
             }
             break;
 
         }
-        custom_text.setBackgroundDrawable(shape);
+        customText.setBackground(shape);
     }
-
-
 }
