@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 group = "com.fxn.cue"
-version = "1.1"
+version = "1.1.1"
 
 android {
     compileSdkVersion 31
@@ -34,3 +34,15 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$testRuner"
     androidTestImplementation "androidx.test.espresso:espresso-core:$testEspresso"
 }
+
+//publishing {
+//    publications {
+//        mavenJava(MavenPublication) {
+//            groupId = "com.fxn.cue"
+//            artifactId = "cue"
+//            version = "1.1.1"
+//
+//            from components[java]
+//        }
+//    }
+//}

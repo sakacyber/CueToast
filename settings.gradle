@@ -7,5 +7,6 @@ dependencyResolutionManagement {
     }
 }
 
+rootProject.name = "CueToast"
 include ':app'
 include ':cue'
