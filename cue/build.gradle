@@ -1,8 +1,9 @@
-apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
+plugins {
+    id "com.android.library"
+    id "maven-publish"
+}
 
 group = "com.fxn.cue"
-version = "1.1.4"
 
 android {
     compileSdkVersion 31
@@ -19,7 +20,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
 
@@ -37,14 +38,16 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$testEspresso"
 }
 
-//publishing {
-//    publications {
-//        mavenJava(MavenPublication) {
-//            groupId = "com.fxn.cue"
-//            artifactId = "cue"
-//            version = "1.1.4"
-//
-//            from components[java]
-//        }
-//    }
-//}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+//                from components.release
+
+                groupId = "com.fxn.cue"
+                artifactId = "cue"
+                version = "1.1.4"
+            }
+        }
+    }
+}

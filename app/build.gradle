@@ -1,4 +1,6 @@
-apply plugin: 'com.android.application'
+plugins {
+    id "com.android.application"
+}
 
 android {
 
@@ -17,7 +19,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
 
@@ -35,5 +37,5 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$testRuner"
     androidTestImplementation "androidx.test.espresso:espresso-core:$testEspresso"
 
-    implementation project(':cue')
+    implementation project(":cue")
 }
